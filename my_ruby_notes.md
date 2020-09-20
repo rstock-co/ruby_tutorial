@@ -1,10 +1,20 @@
 # My Ruby Notes
 
->*this repo is primarily based on Michael Hartl's "Learn Enough Ruby to be Dangerous".  Other minor sources include "Why's Poignant Guide to Ruby", and various Youtube videos.*
-
 ### Syntax
 
-- Instead of curly braces, simply use a new line and the word "end".
+- In general Ruby doesn't have as many symbols as JavaScript.
+  - Example 1: with code blocks such as an "if statement" you don't need the round brackets around the conditional statement that "if" is evaluating.  Also, instead of curly braces wrapping the code, simply use the word "end" to end the block).
+```
+      if password.length <= 7
+        puts "Password is too short"
+      else
+        puts "Password is good"
+      end 
+      
+      # in Ruby, for such a simple statement, you could even shorten it to:
+      
+      puts "Password is to short" unless password.length > 7
+```
 
 
 ### Objects
