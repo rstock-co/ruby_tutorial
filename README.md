@@ -36,5 +36,11 @@ This repo is primarily based on [Michael Hartl's "Learn Enough Ruby to be Danger
 
 ### Chapter 5: Functions & Blocks
 
-- Function definitions
+- Function definitions in a separate file (imported to another file using 'require')
+- Method chaining
+- Blocks (2 types:  (1) {}, (2) do/end)
+- Yield
+
+### Chapter 6: Functional Programming
+
 - 
