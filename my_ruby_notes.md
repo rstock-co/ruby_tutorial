@@ -58,7 +58,7 @@ Ruby for loop:
 ```
 ### Arrays
 
-[documentation](https://ruby-doc.org/core-2.7.0/Array.html)
+**[see full documentation](https://ruby-doc.org/core-2.7.0/Array.html)**
 
 Splitting arrays
 
@@ -76,7 +76,21 @@ Slicing arrays
 
 `a = [34, 40, 29, 71, 20] => slice using: a[1..3] => result: [40, 29, 71]`
 
+Create array from sequence
 
+`(1..10).to_a   =>  [1,2,3,4,5,6,7,8,9,10]
+('a'..'z').to_a =>  [27 separate letters of alphabet]`
+
+Push using shovel operator (<<)
+
+`a << ant << bat << cat
+a = [ant, bat, cat]`
+
+Iteration
+
+`a.each do |element|
+   code to manipulate element
+ end`
 
 
 
