@@ -25,14 +25,11 @@ Polymorphism
 
 Duck typing.
 
-### Functions
-
-- Ruby has 'implict' returns, so there isn't a need to write 'return' within Ruby functions.  They all return something.
-
 ### Ruby Enviroments
 
 - It's common practice to use the REPL (irb) to test code, before copying it into a ruby file.
 - 
+
 
 ### Syntax
 
@@ -51,6 +48,10 @@ Duck typing.
       puts "Password is to short" unless password.length > 7
 ```
 
+### Functions
+
+- Ruby has 'implict' returns, so there isn't a need to write 'return' within Ruby functions.  They all return something.
+
 ### Looping
 
 ```
@@ -68,13 +69,28 @@ Ruby for loop:
         
 ```
 
+### Blocks
+
+There are 2 types of blocks in ruby:  
+
+1. Do/end
+```
+(1..5).each do |i|
+  puts 2**i
+end
+```
+2. Curly braces {}
+
+`(1..5).each { |i| puts 2**i }`
+
+In functional programming, there are many different methods that are useful with blocks.
+
+Yield: a characteristic keyword that is associated with blocks. Every function in Ruby can take a block as an argument.  ([see this article on yield](https://ruby-doc.org/docs/Einfuhrung_in_Ruby/chp_04/iterators.html))
+
 ### Strings
 
 append to end of a string:
 `s+=`
-
-
-
 
 ### Arrays
 
