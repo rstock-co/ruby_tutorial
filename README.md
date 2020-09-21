@@ -43,4 +43,6 @@ This repo is primarily based on [Michael Hartl's "Learn Enough Ruby to be Danger
 
 ### Chapter 6: Functional Programming
 
-- 
+- Mapping
+- Select
+- Reduce
