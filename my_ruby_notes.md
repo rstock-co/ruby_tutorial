@@ -56,6 +56,27 @@ Ruby for loop:
   end
         
 ```
+### Arrays
+
+[documentation](https://ruby-doc.org/core-2.7.0/Array.html)
+
+Splitting arrays
+
+`a = a.split  OR add character to split by =>  a.split(",")`
+
+Arrays in ruby can contain more than one different data type 
+
+`a = [foo, 42, true])`
+
+Access last element in array using 
+
+`a[-1], a.last, or a[array.length -1]` 
+
+Slicing arrays
+
+`a = [34, 40, 29, 71, 20] => slice using: a[1..3] => result: [40, 29, 71]`
+
+
 
 
 
