@@ -1,6 +1,6 @@
 # Ruby Tutorial
 
-This repo is primarily based on Michael Hartl's "Learn Enough Ruby to be Dangerous".  Below is an executive summary of the topics I went through in the tutorial *(also see **"my_ruby_notes.md"** to see the notes I took).*
+This repo is primarily based on Michael Hartl's "Learn Enough Ruby to be Dangerous" tutorial.  Below are the items I went through. (**"my_ruby_notes.md"** contains my notes)*
 
 ### Section 1:  Intro
 
