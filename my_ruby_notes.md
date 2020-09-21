@@ -1,5 +1,7 @@
 # My Ruby Notes
 
+*Note: These notes are also based on [Why's Poignant Guide to Ruby](https://poignant.guide/book/chapter-2.html) and the [Free Code Camp Intro to Ruby](https://youtu.be/t_ispmWmdjY), among other YouTube videos.*
+
 ### Objects
 
 **| [Vid 1](https://youtu.be/Dji9ALCgfpM?t=1771)  | 
@@ -7,7 +9,7 @@
 
 Ruby is an object-oriented programming language which means programming in Ruby often involves manipulating objects.  In fact almost everything in Ruby is an object which can be manuipulated or acted upon.
 
-Objects are data with functions attached to them.  When attached to objects, those functions are also called “methods”, and they give objects capabilities - the ability to "do things".  
+Objects are data with functions attached to them.  When attached to objects, those functions are also called “methods”, and they give objects capabilities - the ability to "do things".   Methods can be chained (called 'method chaining'), which can be thought of like water cascading down several levels of rocks (ie:  `Object.method.method.method.method`).  Each method pipes the output to the next method as it transforms the data from method to method.
 
 You can model real world objects (ie. phone, book, mastercard, etc) in Ruby using “Classes”.  Each class can only inherit one other class’ attributes, but you can add many modules to each object.
 
@@ -28,6 +30,7 @@ Duck typing.
 
 - In general Ruby doesn't have as many symbols as JavaScript.
   - Example 1: with code blocks such as an "if statement" you don't need the round brackets around the conditional statement that "if" is evaluating.  Also, instead of curly braces wrapping the code, simply use the word "end" to end the block).
+  
 ```
       if password.length <= 7
         puts "Password is too short"
@@ -92,5 +95,20 @@ Iteration
    code to manipulate element
  end`
 
+### Math
 
+**[see full documentation](https://ruby-doc.org/core-2.7.0/Math.html)**
+
+Access libraries in-formula:  `Math.cos(2*Math::PI)`
+
+Exponents:  `2**3 = 8` 
+
+Logrithm: note in ruby the log(base) is e, not 10.
+
+### Time
+
+**[see full documentation](https://ruby-doc.org/core-2.7.0/Time.html)**
+
+Get current time:  `now = Time.now  => now.year, now.month, now.day, now.hour`
+Create a time: `moon_landing = Time.utc.(1969, 7, 20, 20, 17, 40)  => July 20, 1969 8:17:40 pm`
 
