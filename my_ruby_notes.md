@@ -154,12 +154,36 @@ array.split(/\s+/)   # splits by one or more whitespace characters (this is the 
 
 **[see full documentation](https://ruby-doc.org/core-2.7.1/Hash.html)**
 
-Also called associative arrays.  
+Hashes are used heavily in Ruby, especially in Ruby on Rails.
+Also called associative arrays. They are analogical to a dictionary, where there is a word (a 'key'), and a definition (a 'value'). 
 
 ```
+# Defining a hash
+
 user = {}
-user["first_name" = "Richard"]
-user["last_name" = "Stock"]
+user["first_name"] = "Richard"  # "first_name" = key, "Richard" = value
+user['last_name"] = "Stock"
+
+OR
+
+user = { "first_name" => "Richard, "last_name" => "Stock" }   # '=>' is called a 'hash rocket'
+```
+
+Note:  Ruby has a data type called "symbol" which is a string but only used for labelling things.
+
+Example of a symbol: `:name`  Note that not all symbols are valid in defining symbols (use letters and numbers).
+
+Define symbols as keys: 
+```
+user = { :name => "Richard Stock", :email => "rstock.co@gmail.com" }
+user[:name] = "Richard Stock"
+
+NOTE:  only within hashes, you can also do 
+user = { name: "Richard Stock", email: "rstock.co@gmail.com" }
+```
+
+
+
 
 
 
