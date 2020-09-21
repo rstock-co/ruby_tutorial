@@ -5,7 +5,7 @@
 **| [Vid 1](https://youtu.be/Dji9ALCgfpM?t=1771)  | 
 [Vid 2](https://youtu.be/t_ispmWmdjY?t=11671) |**
 
-Ruby is an object-oriented programming language which means programming in Ruby often involves manipulating objects.  
+Ruby is an object-oriented programming language which means programming in Ruby often involves manipulating objects.  In fact almost everything in Ruby is an object which can be manuipulated or acted upon.
 
 Objects are data with functions attached to them.  When attached to objects, those functions are also called “methods”, and they give objects capabilities - the ability to "do things".  
 
@@ -39,3 +39,23 @@ Duck typing.
       
       puts "Password is to short" unless password.length > 7
 ```
+
+### Looping
+
+```
+Javascript for loop:
+
+  for (var i = 0; i < 5; i++) {
+    code
+  }
+
+Ruby for loop:
+
+  for i in 0..4 do 
+    code
+  end
+        
+```
+
+
+
