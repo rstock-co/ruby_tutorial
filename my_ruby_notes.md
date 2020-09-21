@@ -25,6 +25,14 @@ Polymorphism
 
 Duck typing.
 
+### Functions
+
+- Ruby has 'implict' returns, so there isn't a need to write 'return' within Ruby functions.  They all return something.
+
+### Ruby Enviroments
+
+- It's common practice to use the REPL (irb) to test code, before copying it into a ruby file.
+- 
 
 ### Syntax
 
@@ -194,16 +202,4 @@ Iterate through hash:
 user.each do |key, value|
   puts "Key #{key.inspect} has value #{value.inspect}"   (note the shorthand for this would be 'p' which would replace 'puts' and '.inspect')
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
+```
