@@ -219,3 +219,21 @@ user.each do |key, value|
   puts "Key #{key.inspect} has value #{value.inspect}"   (note the shorthand for this would be 'p' which would replace 'puts' and '.inspect')
 end
 ```
+
+### Functional Programming
+
+Mapping: 
+
+```
+[1,2,3,4].map { |n| n*n }
+=> [1,4,9,16]
+
+["JOHN", "ALICE"].map { |name| name.downcase }
+=> [john,alice]
+```
+"Symbol to proc" mapping format (shorter)
+```
+["JOHN", "ALICE"].map(&:downcase)
+=> [john,alice]
+```
+
