@@ -1,6 +1,8 @@
 require 'sinatra'
-    get '/' do
-      DAYNAMES = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-      dayname = DAYNAMES[Time.now.wday]
-      "hello world! Happy #{dayname}"
-    end
+require './day'
+
+# Returns the day of the week for the given Time object.
+
+get '/' do
+  "hello world! Happy #{day_of_the_week(Time.now)}"
+end
