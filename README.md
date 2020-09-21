@@ -1,6 +1,6 @@
 # Ruby Tutorial
 
-This repo is primarily based on Michael Hartl's "Learn Enough Ruby to be Dangerous" tutorial.  Below are the topics I went through. (**"my_ruby_notes.md"** contains the notes I took)*
+This repo is primarily based on Michael Hartl's "Learn Enough Ruby to be Dangerous" tutorial.  Below are the topics I went touched on (see **"my_ruby_notes.md"** for more detailed notes)*
 
 ### Chapter 1:  Intro
 
@@ -15,4 +15,14 @@ This repo is primarily based on Michael Hartl's "Learn Enough Ruby to be Dangero
 ### Chapter 3: Arrays
 
 - Splitting
-- 
+- Accessing elements
+- Slicing
+- Sort, reverse, push, pop, join
+- Iterating through elements
+
+### Chapter 4: Other Native Objects
+
+- Math
+- Dates
+- Regular Expressions
+- Hashes
