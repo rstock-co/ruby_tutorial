@@ -109,6 +109,25 @@ Logrithm: note in ruby the log(base) is e, not 10.
 
 **[see full documentation](https://ruby-doc.org/core-2.7.0/Time.html)**
 
-Get current time:  `now = Time.now  => now.year, now.month, now.day, now.hour`
-Create a time: `moon_landing = Time.utc.(1969, 7, 20, 20, 17, 40)  => July 20, 1969 8:17:40 pm`
+Get current time:  `now = Time.now.utc  => now.year, now.month, now.day, now.hour`
+
+Create a time: `moon_landing = Time.utc(1969, 7, 20, 20, 17, 40)  => July 20, 1969 8:17:40 pm`
+
+Math:  `now - moon_landing = 15502038405` represents the number of seconds that has passed.
+
+Get day of week:  `moon_landing.wday`   (0 is Sunday)
+
+Convert to string:  
+```
+DAYNAMES = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+DAYNAMES[moon_landing.wday] => "Sunday"
+```
+### Regular Expressions
+
+**[see full documentation](https://ruby-doc.org/core-2.7.1/Regexp.html)**
+
+**[Rubular editor](https://rubular.com)**
+
+\d{5} = Zip code testing
+
 
