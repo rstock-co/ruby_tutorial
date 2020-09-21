@@ -59,6 +59,15 @@ Ruby for loop:
   end
         
 ```
+
+### Strings
+
+append to end of a string:
+`s+=`
+
+
+
+
 ### Arrays
 
 **[see full documentation](https://ruby-doc.org/core-2.7.0/Array.html)**
@@ -124,10 +133,39 @@ DAYNAMES[moon_landing.wday] => "Sunday"
 ```
 ### Regular Expressions
 
-**[see full documentation](https://ruby-doc.org/core-2.7.1/Regexp.html)**
+**| [see full documentation](https://ruby-doc.org/core-2.7.1/Regexp.html) | [Rubular editor](https://rubular.com) |**
 
-**[Rubular editor](https://rubular.com)**
+Although these can be intricate, they are very powerful, and the time spent learning them is well spent.
 
-\d{5} = Zip code testing
+Example: Zip code testing
+```
+\d{5}  # '\d'	= Any digit, 'a{5}' = Exactly 5 of a
+zip_code = /\d{5}/ # wrap regexp in backslashes to search in text
+address = "Beverly Hills 90210"
+address.match(zip_code)  ==> evaluates to 'true'
+address.scan(zip_code) ==> evaluates to '90210'
+```
+Combining regexp and array methods
+
+`array = [ant, bat, cat]
+array.split(/\s+/)   # splits by one or more whitespace characters (this is the default behaviour of split)`
+
+### Hashes
+
+**[see full documentation](https://ruby-doc.org/core-2.7.1/Hash.html)**
+
+Also called associative arrays.  
+
+```
+user = {}
+user["first_name" = "Richard"]
+user["last_name" = "Stock"]
+
+
+
+
+
+
+
 
 
