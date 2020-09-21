@@ -7,12 +7,14 @@ This repo is primarily based on Michael Hartl's "Learn Enough Ruby to be Dangero
 - Set up a web app using Sinatra and Heroku to publish "Hello, world" to the live web.
 
 ### Chapter 2: Strings
+**([see full documentation](https://ruby-doc.org/core-2.7.0/String.html))**
 
 - Comparisons, logic, etc
-- String methods ([see docs for all](https://ruby-doc.org/core-2.7.0/String.html))
+- String methods 
 - Looping through strings, string index
 
 ### Chapter 3: Arrays
+**([see full documentation](https://ruby-doc.org/core-2.7.0/Array.html))**
 
 - Splitting
 - Accessing elements
