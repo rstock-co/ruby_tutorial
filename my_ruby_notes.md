@@ -155,7 +155,8 @@ array.split(/\s+/)   # splits by one or more whitespace characters (this is the 
 **[see full documentation](https://ruby-doc.org/core-2.7.1/Hash.html)**
 
 Hashes are used heavily in Ruby, especially in Ruby on Rails.
-Also called associative arrays. They are analogical to a dictionary, where there is a word (a 'key'), and a definition (a 'value'). 
+
+Hashes are also called 'associative arrays'. They are analogical to a dictionary, where there is a word (a 'key'), and a definition (a 'value'). 
 
 ```
 # Defining a hash
@@ -181,6 +182,19 @@ user[:name] = "Richard Stock"
 NOTE:  only within hashes, you can also do 
 user = { name: "Richard Stock", email: "rstock.co@gmail.com" }
 ```
+
+Nested Hashes:
+```
+params = {}
+params[:user] = { name: "Richard Stock", email: "rstock.co@gmail.com" }
+params[:user][:name] = "Richard Stock"
+```
+Iterate through hash:
+```
+user.each do |key, value|
+  puts "Key #{key.inspect} has value #{value.inspect}"   (note the shorthand for this would be 'p' which would replace 'puts' and '.inspect')
+end
+
 
 
 
