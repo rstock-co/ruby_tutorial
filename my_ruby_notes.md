@@ -236,4 +236,7 @@ Mapping:
 ["JOHN", "ALICE"].map(&:downcase)
 => [john,alice]
 ```
+Reduce:
+
+`numbers.reduce(0) |do total, n|
 
