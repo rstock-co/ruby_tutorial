@@ -62,8 +62,18 @@ This repo is primarily based on [Michael Hartl's "Learn Enough Ruby to be Danger
 ### Chapter 8: Testing and Test Driven Development
 
 - Automated testing is one of the most important aspects of modern software development.
-- Set up our system for automated testing (Section 8.1) by creating our own ruby gem.
-- Wrote automated tests for the existing palindrome? functionality (Section 8.2).
+- Set up our system for automated testing (Section 8.1) by creating my **[own ruby gem](https://rubygems.org/gems/rstock_palindrome)** [(see source code)](https://github.com/rstock-co/rstock_palindrome)
+- Wrote automated tests for the existing `palindrome?` functionality (Section 8.2).
 - Wrote a failing test for the enhanced palindrome detector (red) (Section 8.3).
 - Wrote (ugly) code to get the test passing (green) (Section 8.4).
 - Refactored the code to make it prettier, while ensuring that the test suite stayed green (Section 8.5).
+
+### Chapter 9: Shell Scripts
+
+**| [see full documentation](https://ruby-doc.org/stdlib-2.5.1/libdoc/shell/rdoc/Shell.html) | [Enhanced Shell Scripting](https://www.devdungeon.com/content/enhanced-shell-scripting-ruby) |**
+
+- Ruby Scripts for the Unix Shell (using first line: `#!/usr/bin/env ruby`)
+- Wrote shell scripts for:
+  - detect palindromes in files
+  - detect palindromes in a live web page (involved reading content from live web URL's)
+  - utility script that manipulates DOM outside of a web browser
