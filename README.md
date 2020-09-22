@@ -43,6 +43,14 @@ This repo is primarily based on [Michael Hartl's "Learn Enough Ruby to be Danger
 
 ### Chapter 6: Functional Programming
 
-- Mapping
-- Select
-- Reduce
+- Enumerable Module
+  - Mapping
+  - Select
+  - Reduce
+
+### Chapter 7: Objects and Classes
+
+- Class
+
+
+### Chapter 6: Functional Programming
