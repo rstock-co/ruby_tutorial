@@ -38,7 +38,7 @@ This repo is primarily based on [Michael Hartl's "Learn Enough Ruby to be Danger
 
 - Function definitions in a separate file (imported to another file using 'require')
 - Method chaining
-- Blocks (2 types:  (1) {}, (2) do/end)
+- Blocks (2 types:  (1) `{}`, (2) `do/end`)
 - Yield
 
 ### Chapter 6: Functional Programming
@@ -50,7 +50,8 @@ This repo is primarily based on [Michael Hartl's "Learn Enough Ruby to be Danger
 
 ### Chapter 7: Objects and Classes
 
-- Class
-
-
-### Chapter 6: Functional Programming
+- Created a new `Class` called "Phrase" and used it with file `palindrome.rb`
+- Using `self` within objects (same as `this` in JS)
+- Inheritance and `superclass`
+- Derived classes
+- Use `CamelCase` when defining Classes
