@@ -51,7 +51,23 @@ This repo is primarily based on [Michael Hartl's "Learn Enough Ruby to be Danger
 ### Chapter 7: Objects and Classes
 
 - Created a new `Class` called "Phrase" and used it with file `palindrome.rb`
+- Use `CamelCase` when defining Classes
 - Using `self` within objects (same as `this` in JS)
 - Inheritance and `superclass`
 - Derived classes
-- Use `CamelCase` when defining Classes
+- Modifying native objects (added our custom method `palindrome` to the native `String` class, and used `private` to exclude our `processed_content` method).  *This has been coined "Monkeypatching" and is somewhat controversial in the Ruby community, however it is a powerful technique that just needs to be used with care.*
+- Modules (also called `mixins`)
+  - Created a module called "Palindrome" so it could be added to the 'Integer' class as well as the 'String' class.
+
+### Chapter 8: Testing and Test Driven Development
+
+- Automated testing is one of the most important aspects of modern software development.
+- Set up our system for automated testing (Section 8.1) by creating our own ruby gem.
+- Wrote automated tests for the existing palindrome? functionality (Section 8.2).
+- Wrote a failing test for the enhanced palindrome detector (red) (Section 8.3).
+- Wrote (ugly) code to get the test passing (green) (Section 8.4).
+- Refactored the code to make it prettier, while ensuring that the test suite stayed green (Section 8.5).
+- Created and published our own ruby gem!
+
+
+
