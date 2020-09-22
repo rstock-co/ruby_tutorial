@@ -35,6 +35,12 @@ Dot notation is used to access attributes and methods from objects.
 
 ### Modules
 
+**([see full documentation](https://ruby-doc.org/core-2.7.1/Module.html))**
+
+Ruby modules give us a way to factor out common functionality and then mix it in to multiple classes.
+
+Modules are one of the most powerful features in Ruby, and are used heavily.
+
 [Vid 1](https://youtu.be/Dji9ALCgfpM?t=2063)
 
 Polymorphism
@@ -266,6 +272,15 @@ numbers.reduce { |do total, n| total += n }
 Note: these methods have aliases (ex: reduce => inject, map => collect, select => find_all)
 
 
+### Test Driven Development
 
+- 
+
+### Creating a Gem
+
+- The 'Bundler' gem allows us to create a skeleton framework for a new gem using the command: `bundle gem`
+  - When you run this command, Bundler will ask you if you want a testing framework (rspec, minitest), and if you want a license and a code of conduct.
+  - Bundler creates a set of files and initializes a git repository.
+  
 
 
