@@ -4,6 +4,8 @@
 
 ### Objects
 
+**([see full documentation](https://ruby-doc.org/core-2.7.1/Object.html))**
+
 **| [Vid 1](https://youtu.be/Dji9ALCgfpM?t=1771)  | 
 [Vid 2](https://youtu.be/t_ispmWmdjY?t=11671) |**
 
@@ -19,9 +21,17 @@ Dot notation is used to access attributes and methods from objects.
 
 ### Classes
 
+**([see full documentation](https://ruby-doc.org/core-2.7.1/Class.html))**
+
 - Use the `Class` keyword to define the class.
 - Use the special `initialize` method to define the behaviour of `new`
 - Use an Attribute accessor (`attr_accessor`) to allow the getting and setting of attributes. 
+
+![Class Image](https://softcover.s3.amazonaws.com/636/learn_enough_ruby/images/figures/content_attribute.png)
+
+- Superclass:  used to investigate the class hierarchy.  Can keep calling superclass to work up through the hierarchy.  (ex:  String --> Object --> BasicObject)
+
+- Inheritance:  use `<` operator (ex: `Class Phrase < String`)
 
 ### Modules
 
@@ -53,6 +63,8 @@ Duck typing.
       
       puts "Password is to short" unless password.length > 7
 ```
+- Ruby uses `snake_casing` as default, `CamelCasing` for certain things like defining Classes
+
 
 ### Functions
 
