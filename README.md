@@ -63,11 +63,10 @@ This repo is primarily based on [Michael Hartl's "Learn Enough Ruby to be Danger
 
 - Automated testing is one of the most important aspects of modern software development.
 - Set up our system for automated testing (Section 8.1) by creating my **[own ruby gem](https://rubygems.org/gems/rstock_palindrome)** [(see source code)](https://github.com/rstock-co/rstock_palindrome)
-- Wrote automated tests for the existing palindrome? functionality (Section 8.2).
+- Wrote automated tests for the existing `palindrome?` functionality (Section 8.2).
 - Wrote a failing test for the enhanced palindrome detector (red) (Section 8.3).
 - Wrote (ugly) code to get the test passing (green) (Section 8.4).
 - Refactored the code to make it prettier, while ensuring that the test suite stayed green (Section 8.5).
-
 
 ### Chapter 9: Shell Scripts
 
