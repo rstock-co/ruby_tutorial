@@ -67,7 +67,3 @@ This repo is primarily based on [Michael Hartl's "Learn Enough Ruby to be Danger
 - Wrote a failing test for the enhanced palindrome detector (red) (Section 8.3).
 - Wrote (ugly) code to get the test passing (green) (Section 8.4).
 - Refactored the code to make it prettier, while ensuring that the test suite stayed green (Section 8.5).
-- Created and published our own ruby gem!
-
-
-
