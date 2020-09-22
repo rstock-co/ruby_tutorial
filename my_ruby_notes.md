@@ -17,6 +17,12 @@ Every object has attributes which are called “Instance Variables”.  An Attri
 
 Dot notation is used to access attributes and methods from objects.
 
+### Classes
+
+- Use the `Class` keyword to define the class.
+- Use the special `initialize` method to define the behaviour of `new`
+- Use an Attribute accessor (`attr_accessor`) to allow the getting and setting of attributes. 
+
 ### Modules
 
 [Vid 1](https://youtu.be/Dji9ALCgfpM?t=2063)
@@ -222,6 +228,8 @@ end
 
 ### Functional Programming
 
+**([see full documentation: Enumerable Module](https://ruby-doc.org/core-2.7.1/Enumerable.html))**
+
 Mapping: 
 
 ```
@@ -238,5 +246,14 @@ Mapping:
 ```
 Reduce:
 
-`numbers.reduce(0) |do total, n|
+```
+numbers = 1..10
+numbers.reduce { |do total, n| total += n }
+=> 55
+```
+Note: these methods have aliases (ex: reduce => inject, map => collect, select => find_all)
+
+
+
+
 
