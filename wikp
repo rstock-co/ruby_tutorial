@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+require "open-uri"
+require "nokogiri"
+
+# Returns the paragraphs from a Wikipedia link, stripped of reference numbers.
+# Especially useful for text to speech
+
+# Read Wikipedia URL
+url = ARGV[0]
+
+# Parse with Nokogiri
+doc = Nokogiri::HTML(open(url).read)
+
+# Remove the reference
+doc.css('.reference').each(&:remove)
+
+# Collect and print paragraph content
+puts doc.css('p').map(&:content).join("\n")
+
+# Example (from terminal, in same directory as wikp script) type:
+# "./wikp https://es.wikipedia.org/wiki/Ruby | pbcopy" ==> paste into Google translate page
+
