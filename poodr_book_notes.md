@@ -1,8 +1,4 @@
-# Book Notes:
-
-## Practical Object-Oriented Design in Ruby *(by Sandi Metz)*
-
----
+# Book Notes: Practical Object-Oriented Design in Ruby *(by Sandi Metz)*
 
 ### Foreward / Intro
 
@@ -21,13 +17,13 @@
 
 - Failures of OOD might look like failures of coding technique but they are actually failures of perspective. 
 
-> The first requirement for learning how to do object-oriented design is to immerse yourself in objects; once you acquire an object-oriented perspective the rest follows naturally.
+  > The first requirement for learning how to do object-oriented design is to immerse yourself in objects; once you acquire an object-oriented perspective the rest follows naturally.
 
 **Designing for Change with OOP**
 
 - Unfortunately, when designing software, something will change. It always does. The customers didn’t know what they wanted, they didn’t say what they meant. You didn’t understand their needs, you’ve learned how to do something better. Even applications that are perfect in every way are not stable. The application was a huge success, now everyone wants more. 
 
-> Change is unavoidable. It is ubiquitous, omnipresent, and inevitable. 
+  > Change is unavoidable. It is ubiquitous, omnipresent, and inevitable. 
 
 - Applications that are easy to change are a pleasure to write and a joy to extend. They’re flexible and adaptable. Applications that resist change are just the opposite; every change is expensive and each makes the next cost more.
 
@@ -75,6 +71,7 @@
   - Academics eventually got involved and, needing to write dissertations, decided to quantify “goodness.” Being able to measure quality would change OO design from infinitely disputed opinion into measurable science.  In the 1990's Chidamber and Kemerer and Basili did exactly this. Their research shows a definite correlation between use of these techniques and high-quality code.  
 
     > The principles of good design represent measurable truths and following them will improve your code.
+
 
 **Design Patterns**
 
