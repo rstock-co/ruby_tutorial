@@ -76,4 +76,13 @@ This repo is primarily based on [Michael Hartl's "Learn Enough Ruby to be Danger
 - Wrote shell scripts for:
   - detect palindromes in files
   - detect palindromes in a live web page (involved reading content from live web URL's)
-  - utility script that manipulates DOM outside of a web browser
+  - utility script that manipulates DOM outside of a web browser (see "wikp" script)
+  
+  ### Chapter 10: Final Project - A Live Dynamic Web Application
+  
+- Used the custom Ruby gem developed in Chapter 8 in development of a web-based palindrome detector. 
+- Learned how to create dynamic content using embedded Ruby (ERB).
+- Used Sinatra as a back-end web application to handle form submission.
+- App features two (Home and About) which will give us an opportunity to learn how to use a Ruby-based site layout. As part of this, we’ll 
+- Applied TDD to write automated tests for the app.
+- Deployed the app to the live Web **([My Final Project](https://immense-basin-05973.herokuapp.com/))**
