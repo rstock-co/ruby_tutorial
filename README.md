@@ -78,9 +78,9 @@ This repo is primarily based on [Michael Hartl's "Learn Enough Ruby to be Danger
   - detect palindromes in a live web page (involved reading content from live web URL's)
   - utility script that manipulates DOM outside of a web browser (see "wikp" script)
   
-  ### Chapter 10: Final Project - A Live Dynamic Web Application
+### Chapter 10: Final Project - A Live Dynamic Web Application
   
-  **([view My Final Project](https://immense-basin-05973.herokuapp.com/))** | ([view source repo](https://github.com/rstock-co/sinatra_web_app))
+**([view My Final Project](https://immense-basin-05973.herokuapp.com/))** | ([view source repo](https://github.com/rstock-co/sinatra_web_app))
   
 - Used the custom Ruby gem developed in Chapter 8 in development of a web-based palindrome detector. 
 - Learned how to create dynamic content using embedded Ruby (ERB).
