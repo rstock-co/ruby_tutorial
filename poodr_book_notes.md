@@ -109,4 +109,28 @@
 - Bad OOD metrics are indisputably a sign of bad design; code that scores poorly will be hard to change. 
 - Unfortunately, good scores don’t prove the opposite, that is, they don’t guarantee that the next change you make will be easy or cheap (the problem
 is that it is possible to create beautiful designs that over-anticipate the future).While these designs may generate very good OOD metrics, if they anticipate the wrong future they will be expensive to fix when the real future finally arrives. 
-  > OOD metrics cannot identify designs that do the wrong thing in the right way.
+
+  > OOD metrics cannot identify designs that do the wrong thing in the right way.  The ultimate software metric would be *cost per feature over the time interval that matters.*
+  
+- Sometimes the value of having the feature right now is so great that it outweighs any future increase in costs. If lack of a feature will force you out of business today it doesn’t matter how much it will cost to deal with the code tomorrow; you must do the best you can in the time you have. Making this kind of design compromise is like borrowing time from the future and is known as taking on technical debt.
+
+- Because your goal is to write software with the lowest cost per feature, your decision about how much design to do depends on two things: (1) your
+skills and (2) your timeframe.  When the act of design prevents software from being delivered on time, you have lost.
+
+**Intro to OOD with Ruby**
+
+- Object-oriented applications are made up of objects and the messages that pass between them. Messages are the more important of the two.
+- In procedural based languages, there is a chasm between data and behavior. Data is one thing, behavior is something completely different. Data gets packaged up into variables and then passed around to behavior, which could, frankly, do anything to it. Data is like a child that behavior sends off to school every morning; there is no way of knowing what actually happens while it is out of sight. The influences on data can be unpredictable and largely untraceable.
+- Now imagine a different kind of programming language, a class-based object-oriented one like Ruby. Instead of dividing data and behavior into two separate, never-thetwain-shall-meet spheres, Ruby combines them together into a single thing, an *object*. 
+- Objects have behavior and may contain data, data to which they alone control access. Objects invoke one another’s behavior by sending each other *messages*.
+- Ruby has a string `object` instead of a string `data type`.
+- Class-based OO languages like Ruby allow you to define a class that provides a blueprint for the construction of similar objects. A class defines methods (definitions of behavior) and attributes (definitions of variables). Methods get invoked in response to messages. The same method name can be defined by many different objects; it’s up to Ruby to find and invoke the right method of the correct object for any sent message.
+- Ruby comes with a number of predefined classes. The most immediately recognizable are those that overlap the data types used by procedural languages. For example, the String class defines strings, the Fixnum class, integers. There’s a pre-existing class for every data type that you would expect a programming language to supply. However, object-oriented languages are themselves built using objects and here’s where things begin to get interesting.
+- The String class, that is, the blueprint for new string objects, is itself an object; it’s an instance of the Class class. Just as every string object is a data-specific instance of the String class, every class object (String, Fixnum, ad infinitum) is a dataspecific instance of the Class class. The String class manufactures new strings, the Class class manufactures new classes.
+- OO languages are thus open-ended. They don’t limit you to a small set of built-in types and pre-predefined operations; you can invent brand new types of your own. Each OO application gradually becomes a unique programming language that is specifically tailored to your domain.
+
+### Chapter 2: Designing Classes with a Single Responsibility
+
+---
+
+- The foundation of an object-oriented system is the *message*, but the most visible organizational structure is the *class*.
