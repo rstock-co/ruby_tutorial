@@ -62,7 +62,7 @@ This repo is primarily based on [Michael Hartl's "Learn Enough Ruby to be Danger
 ### Chapter 8: Testing and Test Driven Development
 
 - Automated testing is one of the most important aspects of modern software development.
-- Set up our system for automated testing (Section 8.1) by creating my **[own ruby gem](https://rubygems.org/gems/rstock_palindrome)** [(see source code)](https://github.com/rstock-co/rstock_palindrome)
+- Set up our system for automated testing (Section 8.1) by creating my **[own ruby gem](https://rubygems.org/gems/rstock_palindrome)** | ([view source repo](https://github.com/rstock-co/rstock_palindrome))
 - Wrote automated tests for the existing `palindrome?` functionality (Section 8.2).
 - Wrote a failing test for the enhanced palindrome detector (red) (Section 8.3).
 - Wrote (ugly) code to get the test passing (green) (Section 8.4).
@@ -80,7 +80,7 @@ This repo is primarily based on [Michael Hartl's "Learn Enough Ruby to be Danger
   
   ### Chapter 10: Final Project - A Live Dynamic Web Application
   
-  **([view My Final Project](https://immense-basin-05973.herokuapp.com/))**
+  **([view My Final Project](https://immense-basin-05973.herokuapp.com/))** | ([view source repo](https://github.com/rstock-co/sinatra_web_app))
   
 - Used the custom Ruby gem developed in Chapter 8 in development of a web-based palindrome detector. 
 - Learned how to create dynamic content using embedded Ruby (ERB).
