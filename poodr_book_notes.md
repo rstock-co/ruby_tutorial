@@ -199,3 +199,56 @@ puts Gear.new(30, 27).ratio # -> 1.11111111111111
 This `Gear` class is simplicity itself. You create a new `Gear` instance by providing the numbers of teeth for the `chainring` and `cog`. Each instance implements three methods: `chainring, cog,` and `ratio`.
 
 - You show your Gear calculator to a cyclist friend and she finds it useful but immediately asks for an enhancement. She has two bicycles; the bicycles have exactly the same gearing but they have different wheel sizes. She would like you to also calculate the effect of the difference in wheels.
+- You change the Gear class to add this new behavior:
+```
+attr_reader :chainring, :cog, :rim, :tire
+def initialize(chainring, cog, rim, tire)
+  @chainring = chainring
+  @cog = cog
+  @rim = rim
+  @tire = tire
+end
+
+def gear_inches
+  # tire goes around rim twice for diameter
+  ratio * (rim + (tire * 2))
+end
+
+puts Gear.new(52, 11, 26, 1.5).gear_inches
+21 # -> 137.090909090909
+```
+- Now that a rudimentary Gear class exists, it’s time to ask the question: Is this the best way to organize the code?
+- The answer, as always, is: it depends. If you expect the application to remain static forever, Gear in its current form may be good enough. However, you can already foresee the possibility of an entire application of calculators for bicyclists. Gear is the first of many classes of an application that will evolve. To efficiently evolve, code must be easy to change.
+
+**Why Single Responsibility Matters**
+
+> Applications that are *easy to change* consist of classes that are *easy to reuse*. Reusable classes are pluggable units of well-defined behavior that have few entanglements.
+
+- An application that is easy to change is like a box of building blocks; you can select just the pieces you need and assemble them in unanticipated ways.
+
+- A class that has more than one responsibility is difficult to reuse. The various responsibilities are likely thoroughly entangled within the class. If you want to reuse some (but not all) of its behavior, it is impossible to get at only the parts you need. You are faced with two options and neither is particularly appealing. 
+
+- If the responsibilities are so coupled that you cannot use just the behavior you need, you could duplicate the code of interest. This is a terrible idea. Duplicated code leads to additional maintenance and increases bugs. If the class is structured such that you can access only the behavior you need, you could reuse the entire class. This just substitutes one problem for another.
+
+- Because the class you’re reusing is confused about what it does and contains several tangled up responsibilities, it has many reasons to change. It may change for a reason that is unrelated to your use of it, and each time it changes there’s a possibility of breaking every class that depends on it. You increase your application’s chance of breaking unexpectedly if you depend on classes that do too much.
+
+- How can you determine if the Gear class contains behavior that belongs somewhere else? 
+  - One way is to pretend that it’s sentient and to interrogate it. If you rephrase every one of its methods as a question, asking the question ought to make sense. For example, “Please Mr. Gear, what is your ratio?” seems perfectly reasonable, while “Please Mr. Gear, what are your gear_inches?” is on shaky ground, and “Please Mr. Gear, what is your tire (size)?” is just downright ridiculous.
+  - Another way to hone in on what a class is actually doing is to attempt to describe it in one sentence. Remember that a class should do the smallest possible useful thing. That thing ought to be simple to describe. If the simplest description you can devise uses the word “and,” the class likely has more than one responsibility. If it uses the word “or,” then the class has more than one responsibility and they aren’t even very related.
+  
+- OO designers use the word cohesion to describe this concept. When everything in a class is related to its central purpose, the class is said to be highly cohesive or to have a single responsibility.
+
+> “A class has responsibilities that fulfill its purpose.”
+
+- In other words, SRP doesn’t require that a class do only one very narrow thing or that it change for only a single nitpicky reason, instead SRP requires that a class be cohesive—that everything the class does be highly related to its purpose.
+
+- How would you describe the responsibility of the Gear class? How about “Calculate the ratio between two toothed sprockets”? If this is true, the class, as it currently exists, does too much. Perhaps “Calculate the effect that a gear has on a bicycle”? Put this way, gear_inches is back on solid ground, but tire size is still quite shaky. The class doesn’t feel right. Gear has more than one responsibility but it’s not obvious what should be done.
+
+**Determining When to Make Design Decisions**
+
+- It’s common to find yourself in a situation where you know something isn’t quite right with a class. Is this class really a Gear? It has rims and tires, for goodness sake! Perhaps Gear should be Bicycle? Or maybe there’s a Wheel in here somewhere?
+- Do not feel compelled to make design decisions prematurely. Resist, even if you fear your code would dismay the design gurus. When faced with an imperfect and muddled class like Gear, ask yourself: 
+
+  > “What is the future cost of doing nothing today?”
+  
+- This is a (very) small application. It has one developer. You are intimately familiar with the Gear class. The future is uncertain and you will never know less than you know right now. The most cost-effective course of action may be to wait for more information.
