@@ -92,3 +92,21 @@
 1. *Due to lack of it*:  Successful but undesigned applications carry the seeds of their own destruction; they are easy to write but gradually become impossible to change. The early promise of painless development gradually fails and optimism turns to despair as programmers begin to greet every change request with **“Yes, I can add that feature, but it will break everything.”**
 2. *The trap of overdesign:*  With the best of intentions, ambitious programmers, in an excess of enthusiasm apply principles inappropriately and see patterns where none exist. They construct complicated, beautiful castles of code and then are distressed to find themselves hemmed in by stone walls. You can recognize these programmers because they begin to greet change requests with **“No, I can’t add that feature; it wasn’t designed to do that.”**
 3. *The act of design is separated from the act of programming:* Design is a process of progressive discovery that relies on a feedback loop. This feedback loop should be timely and incremental; the iterative techniques of the Agile software movement (http://agilemanifesto.org/) are thus perfectly suited to the creation of well-designed OO applications. When design is dictated from afar none of the necessary adjustments can occur and early failures of understanding get cemented into the code. The programmer becomes so out of touch with the client, they might say, **“Well, I can certainly write this, but it’s not what you really want and you will eventually be sorry.”**
+
+**When to Design**
+
+- Agile believes that your customers can’t define the software they want before seeing it, so it’s best to show them sooner rather than later. If this premise is true, then it logically follows that you should build software in tiny increments, gradually iterating your way into an application that meets the customer’s true need. Agile believes that the most cost-effective way to produce what customers really want is to collaborate with them, building software one small bit at a time such that each delivered bit has the opportunity to alter ideas about the next.
+- If Agile is correct, two other things are also true. 
+  1. First, there is absolutely no point in doing a Big Up Front Design (BUFD) (because it cannot possibly be correct), and 
+  2. no one can predict when the application will be done (because you don’t know in advance what it will eventually do).
+- It should come as no surprise that some people are uncomfortable with Agile. “We don’t know what we’re doing” and “We don’t know when we’ll be done” can be a difficult sell. The desire for BUFD persists because, for some, it provides a feeling of control that would otherwise be lacking.
+- BUFD inevitably leads to an adversarial relationship between customers and programmers.  The design documents of BUFD start out as roadmaps for application development but gradually become the focus of dissent. They do not produce quality software, instead they supply fiercely parsed words that will be invoked in the final, scrambling defense against being the person who ends up holding the hot potato of blame.
+- BUFD is about completely specifying and totally documenting the anticipated future inner workings of all of the features of the proposed application. If there’s a software architect involved this may extend to deciding, in advance, how to arrange all of the code. OOD is concerned with a much narrower domain. It is about arranging what code you have so that it will be easy to change.
+
+**OOD Design Metrics**
+
+- There are numerous Ruby gems (a google search on ruby metrics will turn up the most recent) that assess how well your code follows OOD principles.
+- Bad OOD metrics are indisputably a sign of bad design; code that scores poorly will be hard to change. 
+- Unfortunately, good scores don’t prove the opposite, that is, they don’t guarantee that the next change you make will be easy or cheap (the problem
+is that it is possible to create beautiful designs that over-anticipate the future).While these designs may generate very good OOD metrics, if they anticipate the wrong future they will be expensive to fix when the real future finally arrives. 
+  > OOD metrics cannot identify designs that do the wrong thing in the right way.
