@@ -134,3 +134,68 @@ skills and (2) your timeframe.  When the act of design prevents software from be
 ---
 
 - The foundation of an object-oriented system is the *message*, but the most visible organizational structure is the *class*.
+- What are your classes? How many should you have? What behavior will they implement? How much do they know about other classes? How much of themselves should they expose? These questions can be overwhelming. Every decision seems both permanent and fraught with peril. Fear not. At this stage your first obligation is to take a deep breath and *insist that it be simple*.
+
+  > Your goal is to model your application, using classes, such that it does what it is supposed to do right now and is also easy to change later.
+  
+- Anyone can arrange code to make it work right now. Today’s application can be beat into submission by sheer force of will. It’s a standing target at a known range. It is at your mercy. Creating an easy-to-change application, however, is a different matter. Your application needs to work right now just once; it must be easy to change forever. This quality of easy changeability reveals the craft of programming. Achieving it takes knowledge, skill, and a bit of artistic creativity.  
+
+  > Fortunately, you don’t have to figure everything out from scratch. Much thought and research has gone into identifying the qualities that make an application easy to change. The techniques are simple; you only need to know what they are and how to use them.
+  
+**Deciding What Goes Into a Class**
+
+- You have an application in mind. You know what it should do. You may even have thought about how to implement the most interesting bits of behavior.
+
+  > The problem is *not one of technical knowledge but of organization*; you know how to write the code but not where to put it.
+  
+- In a class-based OO language like Ruby, methods are defined in classes. The classes you create will affect how you think about your application forever. They define a virtual world, one that constrains the imagination of everyone downstream. You are constructing a box that may be difficult to think outside of.
+
+- Despite the importance of correctly grouping methods into classes, at this early stage of your project you cannot possibly get it right. You will never know less than you know right now. If your application succeeds many of the decisions you make today will need to be changed later. When that day comes, your ability to successfully make those changes will be determined by your application’s design.
+
+  > Design is more the art of *preserving changeability* than it is the act of achieving perfection.
+  
+**Organizing Code for Easy Changes**
+
+- Asserting that code should be easy to change is akin to stating that children should be polite; the statement is impossible to disagree with yet it in no way helps a parent raise an agreeable child. The idea of easy is too broad; you need concrete definitions of easiness and specific criteria by which to judge code.
+
+- If you define easy to change as
+  - Changes have no unexpected side effects
+  - Small changes in requirements require correspondingly small changes in code
+  - Existing code is easy to reuse
+  - The easiest way to make a change is to add code that in itself is easy to change
+  
+- Then the code you write should have the following qualities. Code should be `TRUE`:
+  - **Transparent**: The consequences of change should be obvious in the code that is changing and in distant code that relies upon it
+  - **Reasonable**:  The cost of any change should be proportional to the benefits the change achieves
+  - **Usable**:      Existing code should be usable in new and unexpected contexts
+  - **Exemplary**:   The code itself should encourage those who change it to perpetuate these qualities
+  
+Code that is `TRUE` not only meets today’s needs, but can also be changed to meet the needs of the future. 
+
+  > The first step in creating code that is TRUE is to ensure that each class has *a single, well-defined responsibility*.
+  
+**Creating Classes That Have a Single Responsibility**
+
+Example: A Bicycles and Gears Application
+
+- If you look for nouns that represent objects you’ll think of words like bicycle and gear. These nouns represent the simplest candidates to be classes. Intuition says that bicycle should be a class, *but nothing in the above description lists any behavior for bicycle*, so, as yet, it does not qualify.
+- Gear, however, has chainrings, cogs, and ratios, that is, it has both data and behavior. It deserves to be a class. Taking the behavior from the script above, you create this simple Gear class:
+```
+class Gear
+  attr_reader :chainring, :cog
+  def initialize(chainring, cog)
+    @chainring = chainring
+    @cog = cog
+  end
+
+  def ratio
+    chainring / cog.to_f
+  end
+end
+
+puts Gear.new(52, 11).ratio # -> 4.72727272727273
+puts Gear.new(30, 27).ratio # -> 1.11111111111111
+```
+This `Gear` class is simplicity itself. You create a new `Gear` instance by providing the numbers of teeth for the `chainring` and `cog`. Each instance implements three methods: `chainring, cog,` and `ratio`.
+
+- You show your Gear calculator to a cyclist friend and she finds it useful but immediately asks for an enhancement. She has two bicycles; the bicycles have exactly the same gearing but they have different wheel sizes. She would like you to also calculate the effect of the difference in wheels.
